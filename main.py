@@ -22,7 +22,7 @@ example_features = {
 keys = [ "Cement (component 1)(kg in a m^3 mixture)", "Blast Furnace Slag (component 2)(kg in a m^3 mixture)", "Fly Ash (component 3)(kg in a m^3 mixture)", "Water  (component 4)(kg in a m^3 mixture)",  "Superplasticizer (component 5)(kg in a m^3 mixture)", 
         "Coarse Aggregate  (component 6)(kg in a m^3 mixture)", "Fine Aggregate (component 7)(kg in a m^3 mixture)", "Age (day)"]
 
-print ("Enter the value of Cement (component 1)(kg in a m^3 mixture) changes done ")
+print ("Enter the value of Cement (component 1)(kg in a m^3 mixture)")
 input1 = input ()
 print ("Enter the value of Blast Furnace Slag (component 2)(kg in a m^3 mixture)")
 input2 = input ()
