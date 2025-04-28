@@ -156,6 +156,8 @@ footer = """
             margin: 10px 0;
         }
     </style>
+    <div class = "footer">
+    </div>
     <div class="footer">
         <p>Made by <br>Reyan Kumar Sapkota</br></p>
         <p><i>Engineers Without Borders, Pulchowk Chapter</i></p>
