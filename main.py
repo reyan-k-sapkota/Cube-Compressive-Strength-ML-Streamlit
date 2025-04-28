@@ -36,7 +36,7 @@ print ("Enter the value of Coarse Aggregate (component 6)(kg in a m^3 mixture)")
 input6 = input ()
 print ("Enter the value of Fine Aggregate (component 7)(kg in a m^3 mixture)")
 input7 = input ()
-print ("Enter the value of Age (days)")
+print ("Enter the value of Age (Curing age in days)")
 input8 = input ()
 
 
