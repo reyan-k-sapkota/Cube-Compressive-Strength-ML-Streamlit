@@ -74,21 +74,21 @@ algorithms = ["Gradient Boost Regressor", "CatBoost Regressor", "RandomForest Re
 
 with st.form("prediction_form"):
     
-    cement = st.slider("Cement's Weight. (kg in a m^3 mixture)", min_value=1, max_value=700, value=1,)
+    cement = st.slider("Cement's Weight. (kg in a m^3 mixture)", min_value=130, max_value=700, value=200)
 
-    slag = st.slider("Blast Furnace Slag's Weight. (kg in a m^3 mixture)", min_value=0, max_value=150, value=1, )
+    slag = st.slider("Blast Furnace Slag's Weight. (kg in a m^3 mixture)", min_value=0, max_value=330, value=0 )
     
-    fly_ash = st.slider("Fly Ash's Weight. (kg in a m^3 mixture)", min_value=0, max_value=150, value=1,)
+    fly_ash = st.slider("Fly Ash's Weight. (kg in a m^3 mixture)", min_value=0, max_value=180, value=0)
     
-    water = st.slider("Water's Weight. (kg in a m^3 mixture)", min_value=0, max_value=200, value=1)
+    water = st.slider("Water's Weight. (kg in a m^3 mixture)", min_value=120, max_value=250, value=120)
 
-    super_plasticizer = st.slider("SuperPlasticizer's Weight. (kg in a m^3 mixture)", min_value=0, max_value=75, step=1)
+    super_plasticizer = st.slider("SuperPlasticizer's Weight. (kg in a m^3 mixture)", min_value=0, max_value=75, value=0)
 
-    coarse_aggregate = st.slider("Coarse Aggregate Weight. (kg in a m^3 mixture)", min_value=750, max_value=1500, value=1 )
+    coarse_aggregate = st.slider("Coarse Aggregate Weight. (kg in a m^3 mixture)", min_value=750, max_value=1500, value=750 )
     
-    fine_aggregate = st.slider("Fine Aggregate's Weight. (kg in a m^3 mixture)", min_value=300, max_value=1200, value=1)
+    fine_aggregate = st.slider("Fine Aggregate's Weight. (kg in a m^3 mixture)", min_value=300, max_value=1200, value=300)
 
-    age = st.slider("Concrete's curing age (in days)", min_value=3, max_value=360, value=1)
+    age = st.slider("Concrete's curing age (in days)", min_value=3, max_value=360, value=3)
 
 
     c1, c2 = st.columns(2)
@@ -132,7 +132,6 @@ if submit_button2:
 
 st.divider()
 
-github_icon_url = "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
 footer = """
     <style>
         .footer {
