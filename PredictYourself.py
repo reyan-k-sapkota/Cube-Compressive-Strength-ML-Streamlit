@@ -139,7 +139,7 @@ footer = """
             font-size: 15px;
             color: #fff;
             margin-top: 50px;
-            background-color: #1E90FF;  /* Blue background */
+            background-color: #1E90FF;  
             padding: 20px;
             border-radius: 8px;
         }
@@ -177,5 +177,4 @@ footer = """
     </div>
 """
 
-# Display the footer in Streamlit
 st.markdown(footer, unsafe_allow_html=True)
