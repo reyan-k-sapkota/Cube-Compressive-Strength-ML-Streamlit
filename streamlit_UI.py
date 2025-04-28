@@ -1,4 +1,5 @@
 import streamlit as st
+import sklearn
 
 predict = st.Page(
     page = "stream_pages/PredictYourself.py",
@@ -8,10 +9,10 @@ predict = st.Page(
 
 st.set_page_config(layout="centered", initial_sidebar_state="auto")
 
-pg = st.navigation(
+abc = st.navigation(
     {
         "🎯Predict Cube Compressive Strength of Concrete": [predict],
     }
 )
 
-pg.run()
+abc.run()
