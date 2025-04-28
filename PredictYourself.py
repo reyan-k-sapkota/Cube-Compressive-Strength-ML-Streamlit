@@ -68,27 +68,27 @@ with open("Scaler_CS_CatBoosting.pkl", "rb") as f:
 
 
 
-algorithms = ["Gradient Boost Regressor", "CatBoost Regressor", "RandomForest Regressor"]
+algorithms = ["Gradient Boost Regressor", "RandomForest Regressor"]
 
 
 
 with st.form("prediction_form"):
     
-    cement = st.slider("Cement's Weight. (kg in a m^3 mixture)", min_value=130, max_value=700, value=200)
+    cement = st.slider("Cement's Weight. (kg in a m^3 mixture)", min_value=130, max_value=700, value=540)
 
     slag = st.slider("Blast Furnace Slag's Weight. (kg in a m^3 mixture)", min_value=0, max_value=330, value=0 )
     
     fly_ash = st.slider("Fly Ash's Weight. (kg in a m^3 mixture)", min_value=0, max_value=180, value=0)
     
-    water = st.slider("Water's Weight. (kg in a m^3 mixture)", min_value=120, max_value=250, value=120)
+    water = st.slider("Water's Weight. (kg in a m^3 mixture)", min_value=120, max_value=250, value=162)
 
-    super_plasticizer = st.slider("SuperPlasticizer's Weight. (kg in a m^3 mixture)", min_value=0, max_value=75, value=0)
+    super_plasticizer = st.slider("SuperPlasticizer's Weight. (kg in a m^3 mixture)", min_value=0, max_value=75, value=3)
 
-    coarse_aggregate = st.slider("Coarse Aggregate Weight. (kg in a m^3 mixture)", min_value=750, max_value=1500, value=750 )
+    coarse_aggregate = st.slider("Coarse Aggregate Weight. (kg in a m^3 mixture)", min_value=750, max_value=1500, value=1040)
     
-    fine_aggregate = st.slider("Fine Aggregate's Weight. (kg in a m^3 mixture)", min_value=300, max_value=1200, value=300)
+    fine_aggregate = st.slider("Fine Aggregate's Weight. (kg in a m^3 mixture)", min_value=300, max_value=1200, value=676)
 
-    age = st.slider("Concrete's curing age (in days)", min_value=3, max_value=360, value=3)
+    age = st.slider("Concrete's curing age (in days)", min_value=3, max_value=360, value=28)
 
 
     c1, c2 = st.columns(2)
@@ -125,9 +125,9 @@ if submit_button1:
 if submit_button2:
     scaled_input = scaler3.transform(input_dataframe)
     predicted_CS = model3.predict (scaled_input)
-    st.write(f"Your chosen algorithm is **{algorithms[2]}**")
+    st.write(f"Your chosen algorithm is **{algorithms[1]}**")
     st.write(f"Predicted Compressive Strength is **{predicted_CS}** MPa")
-    st.write (f"The R2 Value for this **{algorithms[2]}** model is 0.854, MAE is 4.757, and RMSE is 6.1183")
+    st.write (f"The R2 Value for this **{algorithms[1]}** model is 0.854, MAE is 4.757, and RMSE is 6.1183")
 
 
 st.divider()
@@ -157,6 +157,14 @@ footer = """
         }
     </style>
     <div class = "footer">
+    <p>
+    <a href = "https://archive.ics.uci.edu/dataset/165/concrete+compressive+strength" target = "_blank"> 
+    <i>Training Dataset Source</i>
+    </a>
+    </p>
+    <p>
+    <i><b> Acknowledgement:</b></i>  I-Cheng Yeh, "Modeling of strength of high performance concrete using artificial neural networks," Cement and Concrete Research, Vol. 28, No. 12, pp. 1797-1808 (1998) 
+    </p>
     </div>
     <div class="footer">
         <p>Made by <br>Reyan Kumar Sapkota</br></p>
