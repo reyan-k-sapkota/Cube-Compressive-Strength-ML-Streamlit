@@ -1,1 +1,1 @@
-https://cube-compressive-strength-ml-app-rex.streamlit.app/ 
+https://cube-compressive-strength-ml-model2025.streamlit.app/
