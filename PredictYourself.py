@@ -91,15 +91,12 @@ with st.form("prediction_form"):
     age = st.slider("Concrete's curing age (in days)", min_value=3, max_value=360, value=1)
 
 
-    c1, c2, c3 = st.columns(3)
+    c1, c2 = st.columns(2)
     with c1:
         submit_button1 = st.form_submit_button(label="Predict using Gradient Boost Regressor")
     
     with c2:
-        submit_button2 = st.form_submit_button(label="Predict using CatBoost Regressor")
-
-    with c3:
-        submit_button3 = st.form_submit_button(label="Predict using Random Forest Regressor")
+        submit_button2 = st.form_submit_button(label="Predict using Random Forest Regressor")
     
 
 
@@ -124,15 +121,8 @@ if submit_button1:
     st.write(f"Predicted Compressive Strength is **{predicted_CS}** MPa")
     st.write (f"The R2 Value for this **{algorithms[0]}** model is 0.9084, MAE is 3.022, and RMSE is 4.85")
 
-if submit_button2:
-    scaled_input = scaler2.transform(input_dataframe)
-    predicted_CS = model2.predict (scaled_input)
-    st.write(f"Your chosen algorithm is **{algorithms[1]}**")
-    st.write(f"Predicted Compressive Strength is **{predicted_CS}** MPa")
-    st.write (f"The R2 Value for this **{algorithms[1]}** model is 0.923, MAE is 2.9024, and RMSE is 4.432.")
 
-    
-if submit_button3:
+if submit_button2:
     scaled_input = scaler3.transform(input_dataframe)
     predicted_CS = model3.predict (scaled_input)
     st.write(f"Your chosen algorithm is **{algorithms[2]}**")
